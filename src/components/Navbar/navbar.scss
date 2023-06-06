@@ -1,0 +1,169 @@
+// Navbar -----------------------------------
+.navBar {
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    z-index: 1000;
+
+    .navBarTwo {
+        width: 100%;
+        justify-content: space-between;
+        // top: 0.9rem;
+        padding: 1.5rem 1rem;
+        position: fixed;
+        transition: var(--transition03s);
+
+        .logoDiv {
+            .logo {
+                width: 45%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .navBarMenu {
+                position: absolute;
+                background: var(--secondaryColor);
+                padding: 1.5rem;
+                border-radius: 10px;
+                top: 5rem;
+                right: -50%;
+                width: 80%;
+                transform: translateX(50%);
+                z-index: 2000;
+                box-shadow: var(--boxShadow);
+                border: 3px solid var(--whiteColor);
+                transition: var(--transition);
+
+                .menu {
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    text-align: center;
+        
+                    .listItem {
+                        padding: 0.5rem 0;
+                        cursor: pointer;
+                        color: var(--blackColor);
+        
+                        &:hover {
+                            color: var(--primaryColor);
+                            font-weight: 700;
+                        }
+                    }
+                }
+                
+                .btnOne {
+                    display: block;
+                    justify-content: center;
+                    margin: auto;
+                    margin-top: 1rem;
+                }
+            }
+
+            .btnTwo {
+                display: none;
+            }
+        }
+
+        .toggleIcon {
+            .icon {
+                font-size: 30px;
+                color: var(--blackColor);
+            }
+        }
+        .showNavBar {
+            right: 50%;
+            transition: 0.5s ease-in-out;
+        }
+    }
+
+    .navBarWithBg {
+        // top: 0.9rem;
+        background: var(--secondaryColor);
+        padding: 0.5rem 1rem;
+        box-shadow: var(--boxShadow);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navBar {
+        .navBarTwo {
+            .logoDiv {
+                .logo {
+                    width: 80%;
+                }
+            }
+
+            .menu {
+                flex-direction: row;
+                gap: 0.5rem;
+
+                .listItem {
+                    padding: 0 0.5rem;
+                    font-size: 14px;
+                    cursor: pointer;
+                    color: var(--textColor);
+                    font-weight: 700;
+
+                    &:hover {
+                        color: var(--primaryColor);
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .btnOne, .toggleIcon {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .navBar {
+        .navBarTwo {
+            .logoDiv {
+                .logo {
+                    width: 55%;
+                }
+            }
+
+            .menu {
+                .listItem {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .btnTwo {
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .navBar {
+        .navBarTwo {
+            .menu {
+                .listItem {
+                    font-size: 17px;
+                }
+            }
+        }
+
+        .btnTwo {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (min-width: 1332px) {
+    .navBar {
+        .navBarTwo {
+            .logoDiv {
+                .logo {
+                    width: 45%;
+                }
+            }
+        }
+    }
+}

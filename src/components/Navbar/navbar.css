@@ -1,0 +1,116 @@
+.navBar {
+  position: fixed;
+  flex-direction: column;
+  width: 100%;
+  z-index: 1000;
+}
+.navBar .navBarTwo {
+  width: 100%;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  position: fixed;
+  transition: var(--transition03s);
+}
+.navBar .navBarTwo .logoDiv .logo {
+  width: 45%;
+}
+@media screen and (max-width: 768px) {
+  .navBar .navBarTwo .navBarMenu {
+    position: absolute;
+    background: var(--secondaryColor);
+    padding: 1.5rem;
+    border-radius: 10px;
+    top: 5rem;
+    right: -50%;
+    width: 80%;
+    transform: translateX(50%);
+    z-index: 2000;
+    box-shadow: var(--boxShadow);
+    border: 3px solid var(--whiteColor);
+    transition: var(--transition);
+  }
+  .navBar .navBarTwo .navBarMenu .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .navBar .navBarTwo .navBarMenu .menu .listItem {
+    padding: 0.5rem 0;
+    cursor: pointer;
+    color: var(--blackColor);
+  }
+  .navBar .navBarTwo .navBarMenu .menu .listItem:hover {
+    color: var(--primaryColor);
+    font-weight: 700;
+  }
+  .navBar .navBarTwo .navBarMenu .btnOne {
+    display: block;
+    justify-content: center;
+    margin: auto;
+    margin-top: 1rem;
+  }
+  .navBar .navBarTwo .btnTwo {
+    display: none;
+  }
+}
+.navBar .navBarTwo .toggleIcon .icon {
+  font-size: 30px;
+  color: var(--blackColor);
+}
+.navBar .navBarTwo .showNavBar {
+  right: 50%;
+  transition: 0.5s ease-in-out;
+}
+.navBar .navBarWithBg {
+  background: var(--secondaryColor);
+  padding: 0.5rem 1rem;
+  box-shadow: var(--boxShadow);
+}
+
+@media screen and (min-width: 768px) {
+  .navBar .navBarTwo .logoDiv .logo {
+    width: 80%;
+  }
+  .navBar .navBarTwo .menu {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .navBar .navBarTwo .menu .listItem {
+    padding: 0 0.5rem;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--textColor);
+    font-weight: 700;
+  }
+  .navBar .navBarTwo .menu .listItem:hover {
+    color: var(--primaryColor);
+    font-weight: 700;
+  }
+  .navBar .navBarTwo .btnOne, .navBar .navBarTwo .toggleIcon {
+    display: none;
+  }
+}
+@media screen and (min-width: 960px) {
+  .navBar .navBarTwo .logoDiv .logo {
+    width: 55%;
+  }
+  .navBar .navBarTwo .menu .listItem {
+    font-size: 16px;
+  }
+  .navBar .btnTwo {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navBar .navBarTwo .menu .listItem {
+    font-size: 17px;
+  }
+  .navBar .btnTwo {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1332px) {
+  .navBar .navBarTwo .logoDiv .logo {
+    width: 45%;
+  }
+}/*# sourceMappingURL=navbar.css.map */
